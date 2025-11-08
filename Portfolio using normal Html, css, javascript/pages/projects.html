@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio website of a B.Tech CSE student showcasing projects, skills, and achievements">
+  <meta name="keywords" content="portfolio, computer science, B.Tech, CSE, web development, programming">
+  <title>Rajveer Singh | B.Tech CSE Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <!-- Javascript Files -->
+  <script src="../js/animations.js" defer></script>
+  <script src="../js/navbar.js" defer></script>
+  <script src="../js/projects.js" defer></script>
+</head>
+
+<body style="margin-left:5px; margin-right:5px; margin-top:50px;">
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="skill-icon" style="display: flex;">
+                    <i id="optis" class="fas fa-cloud-bolt emoji" style="position: relative;display: flex;right: 20px;"></i>
+                    <a href="../index.html" id="logo-link" style="position: relative; display: flex;">
+                        <h1 class="RIP" style="position: relative; display: flex;">Rajveer<span>&nbsp;Singh</span></h1>
+                    </a>
+                </div>
+                
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link active">Home</a></li>
+                
+                <li class="nav-item"><a href="Skills.html" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="Education.html" class="nav-link">Education</a></li>
+                
+            </ul>
+            
+            
+        </nav>
+    </header>
+     <!-- Projects Section -->
+     <section id="projects" class="projects">
+        <div class="section-header">
+            <h2>My Projects</h2>
+            <div class="underline"></div>
+        </div>
+        
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Dev</button>
+            <button class="filter-btn" data-filter="app">App Dev</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" data-category="web">
+                <div class="project-img">
+                    <img src="../assets/images/Projects/project1.png" alt="Annual Report Generation System">
+                </div>
+                <div class="project-info">
+                    <h3>Annual Report Generation System</h3>
+                    <p>This platform streamlines data collection, processing, and reporting across departments like Admissions, Finance, Academics, and Research. It ensures efficient workflows and seamless institutional report generation.</p>
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Express</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="#" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card" data-category="ml">
+                <div class="project-img">
+                    <img src="../assets/images/Projects/project2.png" alt="Disease Prediction System">
+                </div>
+                <div class="project-info">
+                    <h3>Al Voice & Music Production Studio</h3>
+                    <p>AI-ML Based Software for Music production using human prompts.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>Pytorch</span>
+                        <span>MusicGen,AudioGen</span>
+                        <span>GTTS</span>
+                        <span>Matplotlib</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="https://github.com/1Rajveer-Singh/AI-Projects/tree/main/Al%20Voice%20%26%20Music%20Production%20Studio" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card" data-category="app">
+                <div class="project-img">
+                    <img src="../assets/images/projects/project3.jpg" alt="Fitness Tracking App">
+                </div>
+                <div class="project-info">
+                    <h3>Fitness Tracking App</h3>
+                    <p>Mobile application for tracking workouts, nutrition, and setting fitness goals with personalized recommendations.</p>
+                    <div class="tech-stack">
+                        <span>React Native</span>
+                        <span>Firebase</span>
+                        <span>Redux</span>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="#" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card" data-category="web">
+                <div class="project-img">
+                    <img src="../assets/images/Projects/project4.png" alt="Library Management System">
+                </div>
+                <div class="project-info">
+                    <h3>Library Management System</h3>
+                    <p>Fully functional LSM platform with user authentication, product management, and payment integration.</p>
+                    <div class="tech-stack">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.librarymanagementsystem-rk.great-site.net/?i=1" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="https://github.com/1Rajveer-Singh/Web-dev-LibraryManagementSystem.git" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 5 -->
+            <div class="project-card" data-category="ml">
+                <div class="project-img">
+                    <img src="../assets/images/projects/project5.jpg" alt="AI-Desktop Assistance">
+                </div>
+                <div class="project-info">
+                    <h3>AI-Desktop Assistance</h3>
+                    <p>This Python-based voice assistant helps automate daily tasks efficiently — just speak your command, and it can play music, browse the web, manage files, send emails, and much more</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>pyttsx3/GTTS</span>
+                        <span>Speech_recognition</span>
+                        <span>webbrowser</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="#" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 6 -->
+            <div class="project-card" data-category="app">
+                <div class="project-img">
+                    <img src="assets/images/projects/project6.jpg" alt="Task Management App">
+                </div>
+                <div class="project-info">
+                    <h3>Task Management App</h3>
+                    <p>Productivity application for managing tasks, setting reminders, and tracking project progress.</p>
+                    <div class="tech-stack">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Firebase</span>
+                        <span>SQLite</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="#" class="btn small-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    </body>
+    </html>

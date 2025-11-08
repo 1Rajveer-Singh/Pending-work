@@ -1,0 +1,23 @@
+{
+    "name": "Rajveer Singh - Portfolio",
+    "short_name": "Portfolio",
+    "description": "Portfolio website of B.Tech CSE Student Rajveer Singh",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4d5bf9",
+    "icons": [
+        {
+            "src": "assets/images/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/images/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["portfolio", "developer", "student"],
+    "lang": "en-US"
+}

@@ -1,0 +1,136 @@
+{
+  "portfolio": {
+    "personalInfo": {
+      "name": "Rajveer Singh",
+      "title": "B.Tech Computer Science & Engineering Student",
+      "email": "1.rajveersinghcse@gmail.com",
+      "location": "Jodhpur, India",
+      "university": "Jodhpur Institute of Engineering & Technology",
+      "year": "3rd Year"
+    },
+    "socialLinks": {
+      "github": "https://github.com/1Rajveer-Singh",
+      "linkedin": "https://www.linkedin.com/in/rajveer-singh-997219291",
+      "twitter": "https://twitter.com/your-twitter",
+      "email": "mailto:1.rajveersinghcse@gmail.com"
+    },
+    "theme": {
+      "primaryColor": "#4d5bf9",
+      "primaryDark": "#3949c1",
+      "primaryLight": "#8893fa",
+      "secondaryColor": "#2c3e50",
+      "successColor": "#28a745",
+      "dangerColor": "#dc3545",
+      "defaultTheme": "light"
+    },
+    "features": {
+      "particleSystem": true,
+      "customCursor": true,
+      "dynamicBackground": true,
+      "aiChatAssistant": true,
+      "performanceDashboard": true,
+      "analytics": true,
+      "pwa": true,
+      "sectionNavigator": true,
+      "typewriterEffect": true,
+      "themeToggle": true
+    },
+    "animations": {
+      "duration": "0.3s",
+      "easing": "ease",
+      "staggerDelay": "0.1s",
+      "scrollAnimations": true,
+      "hoverEffects": true,
+      "loadingScreen": true
+    },
+    "chatAssistant": {
+      "enabled": true,
+      "name": "Portfolio Assistant",
+      "responses": {
+        "greeting": "Hi there! 👋 I'm Rajveer's AI assistant. How can I help you learn more about his work?",
+        "skills": "Rajveer is proficient in Python, Java, JavaScript, React, Node.js, and machine learning technologies.",
+        "projects": "Rajveer has worked on several exciting projects including AI-powered applications and web development.",
+        "contact": "You can reach Rajveer at 1.rajveersinghcse@gmail.com or connect with him on LinkedIn.",
+        "education": "Rajveer is currently pursuing his B.Tech in Computer Science at JIET, Jodhpur."
+      }
+    },
+    "analytics": {
+      "enabled": true,
+      "trackClicks": true,
+      "trackScrolling": true,
+      "trackFormInteractions": true,
+      "trackPerformance": true,
+      "heatmapTracking": true,
+      "sessionStorage": true
+    },
+    "performance": {
+      "lazyLoading": true,
+      "imageOptimization": true,
+      "caching": true,
+      "minification": false,
+      "compressionLevel": "medium"
+    },
+    "seo": {
+      "title": "Rajveer Singh | B.Tech CSE Portfolio",
+      "description": "Portfolio website of a B.Tech CSE student showcasing projects, skills, and achievements",
+      "keywords": "portfolio, computer science, B.Tech, CSE, web development, programming",
+      "author": "Rajveer Singh",
+      "ogImage": "assets/images/og-image.jpg"
+    },
+    "projects": [
+      {
+        "id": 1,
+        "title": "AI-Powered Chat Application",
+        "description": "A real-time chat application built with React, Node.js, and Socket.IO featuring AI-powered responses.",
+        "category": "web",
+        "technologies": ["React", "Node.js", "Socket.IO", "MongoDB", "AI/ML"],
+        "image": "assets/images/Projects/project1.jpg",
+        "liveUrl": "https://example.com/chat-app",
+        "githubUrl": "https://github.com/1Rajveer-Singh/chat-app",
+        "featured": true
+      },
+      {
+        "id": 2,
+        "title": "E-Commerce Platform",
+        "description": "Full-stack e-commerce solution with payment integration and admin dashboard.",
+        "category": "web",
+        "technologies": ["MERN Stack", "Stripe", "Redux", "JWT"],
+        "image": "assets/images/Projects/project2.jpg",
+        "liveUrl": "https://example.com/ecommerce",
+        "githubUrl": "https://github.com/1Rajveer-Singh/ecommerce",
+        "featured": true
+      }
+    ],
+    "skills": {
+      "Programming Languages": [
+        { "name": "Python", "level": 60, "icon": "fab fa-python" },
+        { "name": "Java", "level": 70, "icon": "fab fa-java" },
+        { "name": "JavaScript", "level": 60, "icon": "fab fa-js" },
+        { "name": "C", "level": 50, "icon": "fas fa-code" }
+      ],
+      "Web Technologies": [
+        { "name": "HTML5", "level": 85, "icon": "fab fa-html5" },
+        { "name": "CSS3", "level": 80, "icon": "fab fa-css3-alt" },
+        { "name": "React", "level": 65, "icon": "fab fa-react" },
+        { "name": "Node.js", "level": 30, "icon": "fab fa-node-js" }
+      ],
+      "Tools & Technologies": [
+        { "name": "Git", "level": 85, "icon": "fab fa-git-alt" },
+        { "name": "GitHub", "level": 80, "icon": "fab fa-github" },
+        { "name": "Docker", "level": 60, "icon": "fab fa-docker" },
+        { "name": "VS Code", "level": 90, "icon": "fas fa-code" }
+      ]
+    },
+    "contact": {
+      "formEndpoint": "",
+      "responseTime": "24 hours",
+      "autoReply": true,
+      "validation": {
+        "email": true,
+        "phone": true,
+        "minMessageLength": 10,
+        "maxMessageLength": 500
+      }
+    }
+  }
+}

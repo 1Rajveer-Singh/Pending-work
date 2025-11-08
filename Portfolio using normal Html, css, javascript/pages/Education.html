@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio website of a B.Tech CSE student showcasing projects, skills, and achievements">
+  <meta name="keywords" content="portfolio, computer science, B.Tech, CSE, web development, programming">
+  <title>Rajveer Singh | B.Tech CSE Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="../css/main.css">
+  
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <!-- Javascript Files -->
+  <script src="../js/animations.js" defer></script>
+  <script src="../js/navbar.js" defer></script>
+  <script src="../js/projects.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const timelineBlocks = document.querySelectorAll(".timeline-block");
+
+    // Create the "No Certification Found" message element if it doesn't exist
+    let noResultMsg = document.getElementById("no-result-message");
+    if (!noResultMsg) {
+        noResultMsg = document.createElement("div");
+        noResultMsg.id = "no-result-message";
+        noResultMsg.textContent = "No Certification Found";
+        noResultMsg.style.display = "none";
+        noResultMsg.style.textAlign = "center";
+        noResultMsg.style.marginTop = "20px";
+        noResultMsg.style.fontWeight = "bold";
+        noResultMsg.style.color = "#555";
+        // Insert after the timeline blocks container
+        const container = document.querySelector(".timeline") || document.body;
+        container.appendChild(noResultMsg);
+    }
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Set active class
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            const filterValue = button.getAttribute("data-filter");
+            let visibleCount = 0;
+
+            timelineBlocks.forEach(block => {
+                const blockCategory = block.getAttribute("data-category");
+
+                if (filterValue === "all" || blockCategory === filterValue) {
+                    block.style.display = "block";
+                    visibleCount++;
+                } else {
+                    block.style.display = "none";
+                }
+            });
+
+            // Show or hide "No Certification Found"
+            noResultMsg.style.display = visibleCount === 0 ? "block" : "none";
+        });
+    });
+});
+
+    </script>
+</head>
+<body style="margin-left:5px; margin-right: 5px;margin-top: 10px;">
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="skill-icon" style="display: flex;">
+                    <i id="optis" class="fas fa-cloud-bolt emoji" style="position: relative;display: flex;right: 20px;"></i>
+                    <a href="../index.html" id="logo-link" style="position: relative; display: flex;">
+                        <h1 class="RIP" style="position: relative; display: flex;">Rajveer<span>&nbsp;Singh</span></h1>
+                    </a>
+                </div>
+                
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link active">Home</a></li>
+              
+                <li class="nav-item"><a href="Skills.html" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="Education.html" class="nav-link">Education</a></li>
+                
+            </ul>
+            
+            
+        </nav>
+    </header>
+    <section id="education" class="education">
+        <div class="section-header">
+            <h2>Education & Certifications</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="project-filters" style="background-color: rgb(244, 250, 255);">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Dev</button>
+            <button class="filter-btn" data-filter="app">App Dev</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            <button class="filter-btn" data-filter="hack">Hackthon</button>
+        </div>
+        
+        <div class="timeline" data-category="all">
+            <!-- Education Timeline -->
+            <div class="timeline-block">
+                <div class="timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>B.Tech in Computer Science & Engineering</h3>
+                    <h4>Jodhpur Institute of Engineering & Technology</h4>
+                    <p class="timeline-date">2023 - 2027</p>
+                    <p>Pursuing my bachelor's degree with a focus on artificial intelligence, data science, and web technologies. Maintaining a CGPA of 9.0/10.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-block" data-category="all">
+                <div class="timeline-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="timeline-content" >
+                    <h3>Secondary Education ||Senior Secondary Education</h3>
+                    <h4>KENDRIYA VIDYALAYA AFS NO.I (AFS) JODHPUR</h4>
+                    <p class="timeline-date">2021 - 2023</p>
+                    <p>Completed 12th grade with Science (PCM) stream, scoring 66% marks overall.</p>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+             <!-- first certification-->
+            <div class="timeline-block" data-category="ml">
+                <div class="timeline-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Machine Learning Specialization</h3>
+                    <h4>Coursera - Stanford University</h4>
+                    <p class="timeline-date">June 2023</p>
+                    <p>Comprehensive course covering supervised learning, neural networks, and machine learning systems design.</p>
+                    <a href="#" class="credential-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <!-- Second certification-->
+            <div class="timeline-block" data-category="web">
+                <div class="timeline-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Full Stack Web Development</h3>
+                    <h4>Udemy</h4>
+                    <p class="timeline-date">January 2023</p>
+                    <p>Advanced course on modern web development with MERN stack (MongoDB, Express, React, Node.js).</p>
+                    <a href="#" class="credential-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <!-- Third Certification -->
+            <div class="timeline-block" data-category="web">
+                <div class="timeline-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>AWS Certified Cloud Practitioner</h3>
+                    <h4>Amazon Web Services</h4>
+                    <p class="timeline-date">August 2022</p>
+                    <p>Foundational understanding of AWS Cloud services, security, architecture, and pricing models.</p>
+                    <a href="#" class="credential-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <!-- Fourth Certification -->
+            <div class="timeline-block" data-category="ml">
+                <div class="timeline-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Data Lake: Design, Architecture, and Implementation</h3>
+                    <h4>Udemy</h4>
+                    <p class="timeline-date">April 2025</p>
+                    <p>Foundational understanding of Data Lake concepts, design principles, architectural patterns, implementation strategies, and best practices for managing and securing data at scale.</p>
+                    <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-cd9265da-238d-4765-a883-93aed16e6c3d.jpg" class="credential-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+   
+            <!-- fifth certification-->
+             <div class="timeline-block" data-category="ml">
+                <div class="timeline-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
+                    <h4>Microsoft and LinkedIn</h4>
+                    <p class="timeline-date">April 2025</p>
+                    <p>Foundational understanding of Generative AI technologies, practical applications, ethical considerations, and career development skills to thrive in AI-driven industries, guided by Microsoft and LinkedIn insights.</p>
+                    <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-cd9265da-238d-4765-a883-93aed16e6c3d.jpg" class="credential-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+           
+            <!-- sixth certification-->
+            <div class="timeline-block" data-category="ml">
+                <div class="timeline-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Automated Machine Learning for Beginners (Google & Apple)</h3>
+                    <h4>Udemy</h4>
+                    <p class="timeline-date">April 2025</p>
+                    <p>Foundational understanding of Automated Machine Learning (AutoML) concepts, workflows, model deployment strategies, and tools offered by Google and Apple for building AI solutions with minimal coding.</p>
+                    <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-cd9265da-238d-4765-a883-93aed16e6c3d.jpg" class="credential-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <!--seventh certification-->
+            <div class="timeline-block" data-category="ml">
+                <div class="timeline-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Automated Machine Learning for Beginners (Google & Apple)</h3>
+                    <h4>Udemy</h4>
+                    <p class="timeline-date">April 2025</p>
+                    <p>Foundational understanding of Automated Machine Learning (AutoML) concepts, workflows, model deployment strategies, and tools offered by Google and Apple for building AI solutions with minimal coding.</p>
+                    <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-cd9265da-238d-4765-a883-93aed16e6c3d.jpg" class="credential-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <!--eight certification-->
+            <!-- first certification-->
+            <div class="timeline-block" data-category="hack">
+                <div class="timeline-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>SPHINX'24</h3>
+                    <h4>MNIT Jaipur</h4>
+                    <p class="timeline-date">NOVEMBER 2024</p>
+                    <p>Built a web-based platform to streamline student, faculty, and administrative data management at MNIT Jaipur's 24-Hour Web-A-Thon (Nov 8–9, 2024).</p>
+                    <a href="https://drive.google.com/file/d/1qaD4cKw6jkdn91vDKfn_zT-DmeMWat2Y/view?usp=drive_link" class="credential-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+
+</body>
+</html>

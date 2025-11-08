@@ -1,0 +1,291 @@
+/* ================ ADVANCED CURSOR EFFECTS ================ */
+.custom-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.5;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor.cursor-hover {
+  transform: scale(2);
+  background: var(--primary-light);
+}
+
+.cursor-follower.cursor-hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 1;
+}
+
+.custom-cursor.cursor-text {
+  transform: scale(3);
+  background: var(--secondary-color);
+}
+
+.cursor-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(77, 91, 249, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rippleEffect 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes rippleEffect {
+  to {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+/* ================ TEXT REVEAL ANIMATION ================ */
+.text-reveal span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textReveal 0.6s ease forwards;
+}
+
+@keyframes textReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================ ADVANCED SKILL VISUALIZATION ================ */
+.skill-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(77, 91, 249, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.skill-item:hover::before {
+  left: 100%;
+}
+
+.progress-bar {
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  animation: progressShine 2s infinite;
+}
+
+@keyframes progressShine {
+  0% { transform: translateX(-20px); }
+  100% { transform: translateX(calc(var(--progress-width, 100%) + 20px)); }
+}
+
+/* ================ FLOATING ELEMENTS ================ */
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2n) {
+  animation-delay: -2s;
+  animation-direction: reverse;
+}
+
+.floating-element:nth-child(3n) {
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+/* ================ ADVANCED BUTTON EFFECTS ================ */
+.btn-advanced {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.btn-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-advanced:hover::before {
+  left: 100%;
+}
+
+.btn-advanced:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(77, 91, 249, 0.4);
+}
+
+/* ================ SCROLL INDICATOR ENHANCEMENTS ================ */
+.section-scroll-indicator {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.scroll-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(77, 91, 249, 0.3);
+  margin: 15px 0;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+
+.scroll-dot.active {
+  background: var(--primary-color);
+  transform: scale(1.5);
+}
+
+.scroll-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.scroll-dot:hover::after,
+.scroll-dot.active::after {
+  opacity: 1;
+}
+
+/* ================ ENHANCED ANIMATIONS ================ */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-left { animation: slideInFromLeft 0.8s ease-out forwards; }
+.animate-slide-right { animation: slideInFromRight 0.8s ease-out forwards; }
+.animate-slide-top { animation: slideInFromTop 0.8s ease-out forwards; }
+.animate-slide-bottom { animation: slideInFromBottom 0.8s ease-out forwards; }
+
+/* ================ RESPONSIVE CURSOR ================ */
+@media (max-width: 768px) {
+  .custom-cursor,
+  .cursor-follower {
+    display: none;
+  }
+}
+
+@media (hover: none) {
+  .custom-cursor,
+  .cursor-follower {
+    display: none;
+  }
+}
+
+/* ================ DARK THEME CURSOR ================ */
+[data-theme="dark"] .custom-cursor {
+  background: var(--primary-light);
+}
+
+[data-theme="dark"] .cursor-follower {
+  border-color: var(--primary-light);
+}

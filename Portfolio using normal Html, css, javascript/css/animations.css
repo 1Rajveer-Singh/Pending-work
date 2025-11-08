@@ -1,0 +1,32 @@
+.education {
+    overflow: hidden;
+}
+
+.timeline-block {
+    opacity: 0;
+    transform: translateX(-280px);
+    transition: all 0.8s ease; /* slower and smoother */
+}
+
+/* Even timeline blocks come from right */
+.timeline-block:nth-child(even) {
+    transform: translateX(280px);
+}
+
+/* When "show" class is added */
+.timeline-block.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Styling inside each block */
+.timeline-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+    transition: background 0.9s;
+}
+.timeline-content:hover {
+    background: #f9f9f9;
+}
